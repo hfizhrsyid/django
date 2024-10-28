@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae | Hafizh Rasyid Ridha</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Curriculum Vitae</h1>
+        <h3>Hafizh Rasyid Ridha - 2024</h3>
+        <h6>Bandung | Jl. Kebon Bibit Tengah No. 8 | hafizhrasyid@upi.edu</h6>
+    </header>
+
+    <div class="navBar">
+        <nav>
+            <ul>
+                <li class="{% if request.path == '/pendidikan/' %}active{% endif %}"><a href="{% url 'pendidikan' %}">Riwayat Pend.</a></li>
+                <li class="{% if request.path == '/karir/' %}active{% endif %}"><a href="{% url 'karir' %}">Tujuan Karir</a></li>
+                <li class="{% if request.path == '/organisasi/' %}active{% endif %}"><a href="{% url 'organisasi' %}">Organisasi</a></li>
+                <li class="{% if request.path == '/keahlian/' %}active{% endif %}"><a href="{% url 'keahlian' %}">Keahlian</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <img src="{% static 'img/WhatsApp_Image.jpg' %}" alt="Muka Hafizh" class="face">
+
+    <article>
+        <p class="description">Saya adalah seseorang yang berani untuk mengeksplorasi dan mencoba hal-hal baru. Saya sedang menjalani studi saya pada Pendidikan Ilmu Komputer yang menggabungkan aspek teknologi dan penggunaannya pada pendidikan. Berbekal pengetahuan dalam teori pembelajaran dan juga <i>software development</i>, saya berharap dapat memberikan kontribusi seluas-luasnya dan memberikan perubahan yang positif di mana pun itu.</p>
+    </article>
+
+    <div style="text-align: center;" id="contacts">
+        <p>Contact me at:</p>
+        <a href="https://www.instagram.com/hafizhrasyidd/"><img src="{% static 'img/Instagram_logo_2016.svg.webp' %}" style="display: inline-block; margin: 0 auto; max-width: 64px; max-height: 64px; border-radius: 16px;"></a>
+        <a href="https://x.com/hafizhrasyidd"><img src="{% static 'img/twitter-new-2023-x-logo-white-background-vector_1017-45422.avif' %}" style="display: inline-block; margin: 0 auto; max-width: 64px; max-height: 64px; border-radius: 16px;"></a>
+    </div>
+
+    <footer style="text-align: center;">
+        <p>&copy; 2024 Hafizh Rasyid. All rights reserved.</p>
+    </footer>
+</body>
+</html>
